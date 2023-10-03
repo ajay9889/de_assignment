@@ -1,9 +1,11 @@
+create database food_business_db;
 
-"""
-# Write SQL create statements to create the designed data model
-Food Buisiness will be the sutiable snowflake schema design. 
-"""
-'''Create Customer Table'''
+use food_business_db;
+
+
+-- Write SQL create statements to create the designed data model
+-- Food Buisiness will be the sutiable snowflake schema design.
+-- Create Customer Table-- 
 
 CREATE TABLE Customer(
     customer_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -18,18 +20,18 @@ CREATE TABLE Customer(
     created_at DATE
 );
 
-'''Create LoginActivity Table'''
---Note: 0 = MON, 1 = TUES, 2 = WED, 3 = THU, 4 = FRI, 5 = SAT, 6 = SUN.
+-- Create LoginActivity Table
+-- Note: 0 = MON, 1 = TUES, 2 = WED, 3 = THU, 4 = FRI, 5 = SAT, 6 = SUN.
 CREATE TABLE LoginActivity(
     login_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT,
-    login_channel VARCHAR(50), --mobile/Web
+    login_channel VARCHAR(50),  -- mobile/Web
     day_of_week INT,  -- SUN/MON..
     login_date DATETIME,
     Foreign KEY (customer_id) REFERENCES Customer(customer_id)
 );
 
-'''Create DeviceDetails Table'''
+-- Create DeviceDetails Table
 
 CREATE TABLE DeviceDetails(
     device_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -40,7 +42,7 @@ CREATE TABLE DeviceDetails(
     Foreign KEY (customer_id) REFERENCES Customer(customer_id)
 );
 
-'''Create SellerDetails Table'''
+-- Create SellerDetails Table
 
 CREATE TABLE SellerDetails(
     seller_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -48,17 +50,17 @@ CREATE TABLE SellerDetails(
     created_date DATETIME
 );
 
-'''Create FoodListing Table'''
+-- Create FoodListing Table'''
 CREATE TABLE FoodListing(
     item_id INT AUTO_INCREMENT PRIMARY KEY,
     food_name VARCHAR(255) NOT NULL,
     selling_price DECIMAL(10, 2) NOT NULL,
     avbl_quantity VARCHAR(255) NOT NULL,
-    seller_id INT
+    seller_id INT,
     Foreign KEY (seller_id) REFERENCES SellerDetails(seller_id)
 );
 
-'''Create PurchaseTransactions Table'''
+-- Create PurchaseTransactions Table
 CREATE TABLE PurchaseTransactions(
     transaction_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT,
