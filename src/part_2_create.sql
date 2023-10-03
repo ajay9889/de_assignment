@@ -19,10 +19,12 @@ CREATE TABLE Customer(
 );
 
 '''Create LoginActivity Table'''
+--Note: 0 = MON, 1 = TUES, 2 = WED, 3 = THU, 4 = FRI, 5 = SAT, 6 = SUN.
 CREATE TABLE LoginActivity(
     login_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT,
     login_channel VARCHAR(50), --mobile/Web
+    day_of_week INT,  -- SUN/MON..
     login_date DATETIME,
     Foreign KEY (customer_id) REFERENCES Customer(customer_id)
 );
