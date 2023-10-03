@@ -12,21 +12,21 @@ CREATE TABLE Customer(
     cust_name VARCHAR (50) NOT NULL,
     email VARCHAR (255) NOT NULL,
     is_active BOOLEAN NOT NULL DEFAULT 0,
-    is_approve BOOLEAN NOT NULL DEFAULT 0,
-    reject_reason VARCHAR (255) NOT NULL,
+    registration_status VARCHAR(50),
+    reject_reason VARCHAR (255),
     password VARCHAR(250),
     mobile VARCHAR(15),
     gender VARCHAR(10),
-    created_at DATE
+    created_at DATETIME
 );
 
+
 -- Create LoginActivity Table
--- Note: 0 = MON, 1 = TUES, 2 = WED, 3 = THU, 4 = FRI, 5 = SAT, 6 = SUN.
 CREATE TABLE LoginActivity(
     login_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT,
     login_channel VARCHAR(50),  -- mobile/Web
-    day_of_week INT,  -- SUN/MON..
+    day_of_week VARCHAR(10), -- SUN/MON..
     login_date DATETIME,
     Foreign KEY (customer_id) REFERENCES Customer(customer_id)
 );
@@ -46,6 +46,8 @@ CREATE TABLE DeviceDetails(
 
 CREATE TABLE SellerDetails(
     seller_id INT AUTO_INCREMENT PRIMARY KEY,
+    seller_name VARCHAR(255) NOT NULL,
+    seller_email VARCHAR(255) NOT NULL,
     seller_address VARCHAR(255) NOT NULL,
     created_date DATETIME
 );
@@ -71,3 +73,10 @@ CREATE TABLE PurchaseTransactions(
     Foreign KEY (customer_id) REFERENCES Customer(customer_id),
     Foreign KEY (item_id) REFERENCES FoodListing(item_id)
     );
+    
+DROP TABLE Customer;
+DROP TABLE LoginActivity;
+DROP TABLE DeviceDetails;
+DROP TABLE SellerDetails;
+DROP TABLE FoodListing;
+DROP TABLE PurchaseTransactions;
