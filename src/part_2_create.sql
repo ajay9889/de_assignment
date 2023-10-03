@@ -61,6 +61,8 @@ CREATE TABLE PurchaseTransactions(
     transaction_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT,
     item_id INT,
+    purchase_qauntity INT,
+    price DECIMAL(10, 2) NOT NULL,
     purchase_datetime DATETIME,
     Foreign KEY (customer_id) REFERENCES Customer(customer_id),
     Foreign KEY (item_id) REFERENCES FoodListing(item_id)
