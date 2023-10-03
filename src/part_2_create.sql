@@ -74,9 +74,9 @@ CREATE TABLE PurchaseTransactions(
     Foreign KEY (item_id) REFERENCES FoodListing(item_id)
     );
     
-DROP TABLE Customer;
-DROP TABLE LoginActivity;
-DROP TABLE DeviceDetails;
-DROP TABLE SellerDetails;
-DROP TABLE FoodListing;
-DROP TABLE PurchaseTransactions;
+-- DROP TABLE Customer;
+-- DROP TABLE LoginActivity;
+-- DROP TABLE DeviceDetails;
+-- DROP TABLE SellerDetails;
+-- DROP TABLE FoodListing;
+-- DROP TABLE PurchaseTransactions;
