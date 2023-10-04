@@ -1,3 +1,5 @@
+use food_business_db;
+
 WITH login_activity_qty AS (
 SELECT 
     day_of_week AS HIGHEST_NUMBER_OF_LOGIN_DAY,
@@ -8,3 +10,9 @@ FROM
     GROUP BY HIGHEST_NUMBER_OF_LOGIN_DAY  ORDER By TOTAL_QUANTITY DESC
 ) SELECT HIGHEST_NUMBER_OF_LOGIN_DAY,TOTAL_QUANTITY
 FROM login_activity_qty where Ranking=1;
+
+-- OutPut of above Query
+
+-- HIGHEST_NUMBER_OF_LOGIN_DAY	TOTAL_QUANTITY
+-- FRI							28
+-- TUE							28

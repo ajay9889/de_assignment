@@ -423,6 +423,7 @@ INSERT INTO FoodListing (food_name, selling_price, avbl_quantity, seller_id) VAL
 Select * from FoodListing;
 
 -- Insert in pruchase table
+
 INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (61,16,3,48.77 , CURRENT_TIMESTAMP);
 INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (19,47,12,306.94 , CURRENT_TIMESTAMP);
 INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (66,48,20,403.6 , CURRENT_TIMESTAMP);
@@ -522,5 +523,17 @@ INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price
 INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (77,26,4,94.27 , CURRENT_TIMESTAMP);
 INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (60,32,22,519.33 , CURRENT_TIMESTAMP);
 INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (17,45,25,592.86 , CURRENT_TIMESTAMP);
+
+INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (20,1,22,342.56 , CURRENT_TIMESTAMP);
+INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (76,8,2,32.79 , CURRENT_TIMESTAMP);
+INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (20,5,22,342.56 , CURRENT_TIMESTAMP);
+INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (76,8,2,32.79 , CURRENT_TIMESTAMP);
+INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (20,3,22,342.56 , CURRENT_TIMESTAMP);
+INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (76,8,2,32.79 , CURRENT_TIMESTAMP);
+INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (20,5,22,342.56 , CURRENT_TIMESTAMP);
+INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (76,8,2,32.79 , CURRENT_TIMESTAMP);
+INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (20,5,22,342.56 , CURRENT_TIMESTAMP);
+INSERT INTO PurchaseTransactions (customer_id, item_id, purchase_qauntity, price , purchase_datetime) VALUES (76,12,2,32.79 , CURRENT_TIMESTAMP);
+
 Select * from PurchaseTransactions;
 

@@ -65,11 +65,10 @@ while True:
         break
 
 
-# finally
-# 3. Conveet it into the Dictionary
+# finally display on console first 5 records only
 for record in source_record[:5]:
     print(record)
 
 # or if we want to save into the file
-with open(os.path.join(os.getcwd(), 'src/part_1_file'), 'w+') as fp:
+with open(os.path.join(os.getcwd(), 'src/part_1_file.json'), 'w+') as fp:
     fp.write(json.dumps(source_record))

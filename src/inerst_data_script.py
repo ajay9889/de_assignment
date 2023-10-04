@@ -2,14 +2,14 @@
 import random
 import string
 
+# status_list = ['Rejected', 'Pending', 'Approved']
 # for i in range(1, 100):
-#     if(i % 5 == 0):
-#         status = '\'Rejected\''
+#     reg_status = random.choice(status_list)
+#     status = "\'"+reg_status+"\'"
+#     if(reg_status == 'Rejected'):
 #         reason = '\'Incomplete information\''
 #     else:
-#         status = '\'Approved\''
 #         reason = '\'\''
-
 #     print('INSERT INTO Customer (cust_name, Email, is_active,registration_status,reject_reason,password,mobile,gender,created_at) VALUES (\'customer' +
 #           str(i)+'\',' '\'customer'+str(i)+'@example.com\' , 1 ,' + status + ',' + reason + ',' '\'024ca8e38b33f9116c151123eb432d20\', \'+6534345345\' , \'male\' , CURRENT_TIMESTAMP);')
 
