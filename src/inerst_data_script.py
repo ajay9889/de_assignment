@@ -2,6 +2,9 @@
 import random
 import string
 
+'''
+Optional: This is the just temporary and option python script created for making the insert query.
+'''
 # status_list = ['Rejected', 'Pending', 'Approved']
 # for i in range(1, 100):
 #     reg_status = random.choice(status_list)
